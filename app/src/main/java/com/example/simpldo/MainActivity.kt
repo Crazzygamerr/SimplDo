@@ -3,6 +3,7 @@ package com.example.simpldo
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
@@ -32,20 +33,19 @@ class MainActivity : AppCompatActivity() {
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 
         navController = navHostFragment.navController
-
+        sharedViewModel.todo.observe(this) {
+            setStoreData()
+        }
         sharedViewModel.todo.value!!.addAll(getStoreData())
     }
 
-    override fun onDestroy() {
-        setStoreData()
-        super.onDestroy()
-    }
-
     private fun setStoreData() {
+        Log.d("test set", Gson().toJson(sharedViewModel.todo.value!!.toTypedArray()))
         mainPrefInstance.edit().apply { putString("json", Gson().toJson(sharedViewModel.todo.value!!.toTypedArray())) }.apply()
     }
 
     private fun getStoreData(): List<ListItem> {
+        Log.d("test get", mainPrefInstance.getString("json", "")!!)
         return Gson().fromJson(mainPrefInstance.getString("json", ""), Array<ListItem>::class.java)?.asList() ?: listOf()
     }
 

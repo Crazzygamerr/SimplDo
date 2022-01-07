@@ -35,8 +35,8 @@ class TodoAdapter(
         holder.button.setOnClickListener { onRemove(position) }
 
         holder.checkbox.setOnCheckedChangeListener { _,b -> run{
-            items[position].isComplete = b
-            onChecked(position, items[position])
+                items[position].isComplete = b
+                onChecked(position, items[position])
             }
         }
 

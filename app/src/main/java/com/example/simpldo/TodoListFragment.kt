@@ -43,7 +43,7 @@ class TodoListFragment : Fragment() {
             }
         }, {
             i:Int, item:ListItem ->
-            sharedViewModel.todo.value!![i] = item
+            sharedViewModel.updateItem(i, item)
         })
 
         binding.addItem.setOnClickListener {

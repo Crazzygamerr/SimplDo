@@ -6,17 +6,25 @@ import androidx.lifecycle.ViewModel
 
 class ListViewModel : ViewModel() {
 
-    private val _todo = MutableLiveData<MutableList<ListItem>>()
-    val todo: LiveData<MutableList<ListItem>> = _todo
+    var todo: MutableLiveData<MutableList<ListItem>> = MutableLiveData<MutableList<ListItem>>()
 
     init {
-        _todo.value = mutableListOf<ListItem>()
+        todo.value = mutableListOf<ListItem>()
     }
 
-    fun addItem(item: ListItem) = _todo.value?.add(item)
+    fun addItem(item: ListItem) {
+        todo.value?.add(item)
+        todo.value = todo.value
+    }
 
-    fun updateItem(pos: Int, item: ListItem) = _todo.value?.set(pos, item)
+    fun updateItem(pos: Int, item: ListItem) {
+        todo.value?.set(pos, item)
+        todo.value = todo.value
+    }
 
-    fun removeItem(pos: Int) = _todo.value?.removeAt(pos)
+    fun removeItem(pos: Int) {
+        todo.value?.removeAt(pos)
+        todo.value = todo.value
+    }
 
 }
