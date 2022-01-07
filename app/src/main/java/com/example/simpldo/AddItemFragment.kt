@@ -1,7 +1,5 @@
-package com.example.todo
+package com.example.simpldo
 
-import android.app.LauncherActivity
-import android.content.ClipData
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,11 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.todo.databinding.FragmentAddItemBinding
-import com.example.todo.databinding.FragmentTodoListBinding
-import kotlin.properties.Delegates
+import com.example.simpldo.databinding.FragmentAddItemBinding
 
 class AddItemFragment : Fragment() {
 

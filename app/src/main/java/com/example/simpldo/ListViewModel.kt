@@ -1,4 +1,4 @@
-package com.example.todo
+package com.example.simpldo
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

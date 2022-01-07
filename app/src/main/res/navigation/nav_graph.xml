@@ -21,7 +21,7 @@
     app:startDestination="@id/todoListFragment">
     <fragment
         android:id="@+id/todoListFragment"
-        android:name="com.example.todo.TodoListFragment"
+        android:name="com.example.simpldo.TodoListFragment"
         android:label="TodoListFragment"
         tools:layout="@layout/fragment_todo_list">
         <action
@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/addItemFragment"
-        android:name="com.example.todo.AddItemFragment"
+        android:name="com.example.simpldo.AddItemFragment"
         android:label="AddItemFragment"
         tools:layout="@layout/fragment_add_item">
         <argument

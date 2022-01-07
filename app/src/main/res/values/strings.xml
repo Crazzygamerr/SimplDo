@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Todo</string>
+    <string name="app_name">SimplDo</string>
     <string name="button">.</string>
     <string name="button2">-</string>
     <string name="button3">⤶</string>

@@ -1,4 +1,4 @@
-package com.example.todo
+package com.example.simpldo
 
 import android.os.Bundle
 import android.view.*
@@ -7,7 +7,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.todo.databinding.FragmentTodoListBinding
+import com.example.simpldo.databinding.FragmentTodoListBinding
 
 class TodoListFragment : Fragment() {
 

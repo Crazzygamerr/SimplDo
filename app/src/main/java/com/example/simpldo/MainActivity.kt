@@ -1,10 +1,10 @@
-package com.example.todo
+package com.example.simpldo
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import com.example.todo.databinding.ActivityMainBinding
+import com.example.simpldo.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
