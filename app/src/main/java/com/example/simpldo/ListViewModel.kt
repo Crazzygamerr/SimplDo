@@ -11,7 +11,6 @@ class ListViewModel : ViewModel() {
 
     init {
         _todo.value = mutableListOf<ListItem>()
-
     }
 
     fun addItem(item: ListItem) = _todo.value?.add(item)

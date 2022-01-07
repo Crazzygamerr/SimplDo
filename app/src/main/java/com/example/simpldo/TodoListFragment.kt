@@ -35,13 +35,16 @@ class TodoListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         recyclerView = binding.todoList
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = TodoAdapter(sharedViewModel.todo.value!!) {
+        recyclerView.adapter = TodoAdapter(sharedViewModel.todo.value!!, {
             i: Int ->
             run {
-                sharedViewModel.todo.value!!.removeAt(i)
+                sharedViewModel.removeItem(i)
                 recyclerView.adapter!!.notifyItemRemoved(i)
             }
-        }
+        }, {
+            i:Int, item:ListItem ->
+            sharedViewModel.todo.value!![i] = item
+        })
 
         binding.addItem.setOnClickListener {
             val action = TodoListFragmentDirections.actionTodoListFragmentToAddItemFragment(content = "")

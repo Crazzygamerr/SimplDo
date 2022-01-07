@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Kotlin apps/SimplDo/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Kotlin apps/SimplDo/app/src/main/res/layout/fragment_add_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Kotlin apps/SimplDo/app/src/main/res/layout/fragment_todo_list.xml" value="0.25416666666666665" />
         <entry key="..\:/Kotlin apps/Todo/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
         <entry key="..\:/Kotlin apps/Todo/app/src/main/res/layout/fragment_add_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Kotlin apps/Todo/app/src/main/res/layout/fragment_list.xml" value="0.25416666666666665" />

@@ -9,7 +9,11 @@ import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 
-class TodoAdapter(private var items: List<ListItem>, val onRemove: (Int) -> Unit) : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
+class TodoAdapter(
+    private var items: List<ListItem>,
+    val onRemove: (Int) -> Unit,
+    val onChecked: (Int, ListItem) -> Unit
+) : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
 
     class TodoViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView = view.findViewById<TextView>(R.id.todoContent)
@@ -29,6 +33,12 @@ class TodoAdapter(private var items: List<ListItem>, val onRemove: (Int) -> Unit
         holder.textView.text = items[position].content
         holder.checkbox.isChecked = items[position].isComplete
         holder.button.setOnClickListener { onRemove(position) }
+
+        holder.checkbox.setOnCheckedChangeListener { _,b -> run{
+            items[position].isComplete = b
+            onChecked(position, items[position])
+            }
+        }
 
         holder.view.setOnClickListener {
             val action = TodoListFragmentDirections.actionTodoListFragmentToAddItemFragment(

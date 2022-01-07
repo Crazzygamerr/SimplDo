@@ -1,5 +1,6 @@
 package com.example.simpldo
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -38,6 +39,10 @@ class AddItemFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        if(pos >= 0) {
+            binding.addItemText.text = getString(R.string.update_item)
+            binding.addItem.text = getString(R.string.update_item)
+        }
         binding.todoInput.setText(content)
         binding.addItem.setOnClickListener {
             if(pos >= 0) {
