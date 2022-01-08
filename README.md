@@ -7,9 +7,7 @@ We find it challenging to keep focused on our tasks and complete our work effici
 ### Proposed solution:
 This project basically keeps a list of all your tasks in one place. It has a very simple and intuitive UI. The features include adding, checking, updating and removing your To-do list items. It uses View Model to store data and Shared Preferences to persist the data across sessions. 
 
-![image](https://user-images.githubusercontent.com/45452035/148634168-6f1d3fb1-0078-4eba-993d-dbf3e1834c8d.png)
-![image](https://user-images.githubusercontent.com/45452035/148634175-083d08f4-af2d-44c8-b4c4-90e8f3563ace.png)
-![image](https://user-images.githubusercontent.com/45452035/148634178-35936631-07fc-4ebc-aeec-79e9c06f94ff.png)
+<img width="200" src="https://user-images.githubusercontent.com/45452035/148634346-18155ead-c691-4378-be7f-5b3d95631365.png"> <img width="200" src="https://user-images.githubusercontent.com/45452035/148634377-3d812da8-71e2-4187-82a8-abe6023b8133.png"> <img width="200" src="https://user-images.githubusercontent.com/45452035/148634411-bf1baaa6-f1c0-45f3-b2ac-f67f90d11a50.png">
 
 ### Functionality & Concepts used:
 - The app has a simple interface that helps us to work with the To-do list
