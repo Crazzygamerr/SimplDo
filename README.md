@@ -13,11 +13,13 @@ This project basically keeps a list of all your tasks in one place. It has a ver
 - The app has a simple interface that helps us to work with the To-do list
 - Constraint Layout: The majority of the app's activities employ a flexible constraint layout that is simple to handle across various screen sizes.
 - Recycler View: This is used to show all the user's pending todo. On tapping each item, it's content can be updated. 
+- View Model & LiveData: The data has been seperated from the UI using a View Model. The list is stored in here as Livedata.
 - Jetpack Navigation: Two fragments are switched out in the main activity using this library. It handles all the navigation and passes arguments.
 - Shared Preferences: This is used to store the list across sessions, so that the data is not lost when the app is closed. The todo list is converted into a Json string for storage and retrieval.
 
 ### Application link & Future scope:
 GitHub repo link: https://github.com/Crazzygamerr/SimplDo
+
 APK link: https://github.com/Crazzygamerr/SimplDo/blob/main/SimplDo.apk
 
 While still in it's infancy, the app stays true to it's name for being straightforward and simple to use. Keeping this in mind, its future scope will include some useful features like multiple lists, deadlines, and notifications. Integrations to other platforms is also quite important as it will dramatically increase the ease of use.
